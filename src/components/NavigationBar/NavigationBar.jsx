@@ -41,11 +41,17 @@ class NavigationBar extends Component {
                     <NavbarToggler onClick={this.toggleNavbar} />
                     <Collapse navbar isOpen={this.state.isOpen}>
                         <Nav className="mr-auto" navbar>
-                            <NavItem>
+                            <NavItem className="mx-3">
                                 <NavLink className="navbar-link" href="/#about">about</NavLink>
                             </NavItem>
-                            <NavItem>
-                                <NavLink className="navbar-link" href="/projects">projects</NavLink>
+                            <NavItem className="mx-3">
+                                <NavLink className="navbar-link" href="/#projects">projects</NavLink>
+                            </NavItem>
+                            <NavItem className="mx-3">
+                                <NavLink className="navbar-link" href="/#contact">contact</NavLink>
+                            </NavItem>
+                            <NavItem className="mx-3">
+                                <NavLink className="navbar-link" href="/cv.pdf">cv</NavLink>
                             </NavItem>
                         </Nav>
                         {/* Right hand docked nav bar */}
