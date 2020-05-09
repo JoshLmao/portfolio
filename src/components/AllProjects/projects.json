@@ -1,0 +1,79 @@
+{
+    "games": [
+      {
+        "title": "Lumiere",
+        "description": "Lumiere was an entry into the first Ludum Dare",
+        "date": "2017-07-01T00:00:00.000Z",
+        "assets": {
+          "image": "/projects/lumiere.png"
+        },
+        "links": {
+          "github": "https://github.com/joshlmao/lumiere",
+          "website": "https://joshlmao.itch.io/lumiere"
+        }
+      },
+      {
+        "title": "Zeroes",
+        "description": "Game i created for assignment",
+        "date": "2020-05-01T00:00:00.000Z",
+        "assets": {
+          "video": "/projects/zeroes.webm"
+        },
+        "links": {
+          "github": "https://github.com/JoshLmao/5CS027-Zeroes"
+        }
+      }
+    ],
+    "web": [
+      {
+        "title": "NHS Asset Tracker",
+        "description": "Asset tracker",
+        "date": "2020-05-01T00:00:00.000Z",
+        "links": {
+          "github": "https://github.com/5CS024-Team1/asset-tracker-web",
+          "website": "http://mi-linux.wlv.ac.uk/~1700471/asset-tracker-web/?expired=true"
+        },
+        "assets": {
+          "image": "/projects/nhs-asset-tracker.jpg"
+        }
+      },
+      {
+        "title": "Genify",
+        "description": "Spotify lyrics",
+        "date": "2019-02-01T00:00:00.000Z",
+        "links": {
+          "github": "https://github.com/JoshLmao/Genify",
+          "website": "https://genify.joshlmao.com"
+        },
+        "assets": {
+          "image": "genify.jpg"
+        }
+      }
+    ],
+    "other": [
+      {
+        "title": "Spotify4Unity",
+        "description": "I created a way for",
+        "date": "2018-10-01T00:00:00.000Z",
+        "assets": {
+          "image": "/projects/s4u.gif"
+        },
+        "links": {
+          "github": "https://github.com/joshlmao/spotify4unity",
+          "website": "https://assetstore.unity.com/packages/tools/integration/spotify4unity-ui-tools-spotify-authorization-129028"
+        }
+      },
+      {
+        "title": "Darkest Dungeon Reddit Bot",
+        "description": "Reddit response bot",
+        "date": "June 2019 GMT",
+        "assets": {
+          "image": "/projects/ddrb.jpg"
+        },
+        "links": {
+          "github": "https://github.com/JoshLmao/DarkestDungeonResponseBot",
+          "website": "https://reddit.com/u/dd_responses_bot"
+        }
+      }
+    ]
+  }

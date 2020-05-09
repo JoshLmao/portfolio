@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
-import { Container } from 'reactstrap';
+import { 
+    Container,
+    Row,
+    Col,
+} from 'reactstrap';
 
-import Projects from "../Projects";
+import AllProjects from "../AllProjects";
 import "./Home.css";
 
 import { TWITTER_LINK } from "../../config";
@@ -17,16 +21,14 @@ function AboutMe() {
     );
 }
 
-// function Skills() {
-//     return (
-//         <div className="d-flex">
-//             <h2>Skills</h2>
-//             <div>
-
-//             </div>
-//         </div>
-//     );
-// }
+function Featured() {
+    return (
+        <div>
+            <h2>Featured Work</h2>
+    
+        </div>
+    );
+}
 
 function Contact() {
     return (
@@ -51,19 +53,19 @@ class Home extends Component {
                     <h4>My name is <span>Josh Shepherd</span>, a passionate and experienced games developer</h4>
                 </header>
                 
-                <section className="px-5 mb-5">
+                <section className="p-5 my-5" id="about">
                     <AboutMe />
                 </section>
                 
-                {/* <section className="px-5 mb-5">
+                {/* <section className="px-5 mb-5" id="skills">
                     <Skills />
                 </section> */}
 
-                <section className="px-5 mb-5">
-                    <Projects />
+                <section className="p-5 my-5" id="featured">
+                    <Featured />
                 </section>
 
-                <section className="px-5 mb-5">
+                <section className="p-5 my-5" id="contact">
                     <Contact />
                 </section>
             </Container>

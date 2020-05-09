@@ -45,7 +45,7 @@ class NavigationBar extends Component {
                                 <NavLink className="navbar-link" href="/#about">about</NavLink>
                             </NavItem>
                             <NavItem className="mx-3">
-                                <NavLink className="navbar-link" href="/#projects">projects</NavLink>
+                                <NavLink className="navbar-link" href="/#featured">featured</NavLink>
                             </NavItem>
                             <NavItem className="mx-3">
                                 <NavLink className="navbar-link" href="/#contact">contact</NavLink>
@@ -56,6 +56,9 @@ class NavigationBar extends Component {
                         </Nav>
                         {/* Right hand docked nav bar */}
                         <Nav>
+                            <NavItem className="mx-3">
+                                <NavLink className="navbar-link" href="/projects">projects</NavLink>
+                            </NavItem>
                             <NavItem>
                                 <NavLink className="navbar-link" href={TWITTER_LINK}>
                                     <FontAwesomeIcon icon={faTwitter} />
