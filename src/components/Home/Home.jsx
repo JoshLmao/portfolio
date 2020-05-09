@@ -5,7 +5,7 @@ import {
     Col,
 } from 'reactstrap';
 
-import AllProjects from "../AllProjects";
+import Featured from "../Featured";
 import "./Home.css";
 
 import { TWITTER_LINK } from "../../config";
@@ -21,11 +21,28 @@ function AboutMe() {
     );
 }
 
-function Featured() {
+function Skills() {
     return (
         <div>
-            <h2>Featured Work</h2>
-    
+            <h2>Skills/Experience</h2>
+            <Row>
+                <Col md={6} className="d-flex skill-column px-5">
+                    <div>
+                        <h4>Core</h4>
+                        <h6>C#, C++, Python, Javascript</h6>
+                        <h6>.NET Framework, React, NodeJS, Node Package Manager (NPM)</h6>
+                        <h6>Object Oriented Programming (OOP)</h6>
+                    </div>
+                </Col>
+                <Col md={6} className="d-flex skill-column px-5">
+                    <div>
+                        <h4>Tools</h4>
+                        <h6>Unreal Engine, Unity</h6>
+                        <h6>WPF, Xamarin</h6>
+                        <h6>Git, Agile, GitKraken</h6>
+                    </div>
+                </Col>
+            </Row>
         </div>
     );
 }
@@ -57,9 +74,9 @@ class Home extends Component {
                     <AboutMe />
                 </section>
                 
-                {/* <section className="px-5 mb-5" id="skills">
+                <section className="px-5 mb-5" id="skills">
                     <Skills />
-                </section> */}
+                </section>
 
                 <section className="p-5 my-5" id="featured">
                     <Featured />
