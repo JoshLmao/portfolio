@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import "./NavigationBar.css";
-import { TWITTER_LINK } from "../../config";
+import { links } from "../../data/portfolio.json";
 
 class NavigationBar extends Component {
     constructor(props) {
@@ -21,6 +21,7 @@ class NavigationBar extends Component {
 
         this.state = {
             isOpen: false,
+            links: links,
         };
 
         this.toggleNavbar = this.toggleNavbar.bind(this);
@@ -60,7 +61,7 @@ class NavigationBar extends Component {
                                 <NavLink className="navbar-link" href="/projects">projects</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="navbar-link" href={TWITTER_LINK}>
+                                <NavLink className="navbar-link" href={this.state.links.twitter}>
                                     <FontAwesomeIcon icon={faTwitter} />
                                 </NavLink>
                             </NavItem>    

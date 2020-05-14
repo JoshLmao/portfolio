@@ -1,0 +1,11 @@
+{
+    "name": "Josh Shepherd",
+    "picture": "/profile.jpg",
+    "email": "josh_shepherd@outlook.com",
+    "about": "Hi! My name is Josh and I love coding, music and video games. I've been programming since I started learning in 2015 and have always had a massive interest in playing and creating video games. I'm a big fan of open source coding and making the things I create available to people for free.",
+    "links": {
+      "twitter": "https://twitter.com/JoshLmao",
+      "linkedin": "https://linkedin.com/in/joshshepherd-",
+      "github": "https://github.com/joshlmao"
+    }
+  }

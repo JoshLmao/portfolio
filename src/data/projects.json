@@ -2,7 +2,7 @@
     "games": [
       {
         "title": "Lumiere",
-        "description": "Lumiere was an entry into the first Ludum Dare",
+        "description": "You play as a spaceman who's oxygen tank runs out as he moves. The player must make their way through infinite space trying to get as many points as possible.\n\nAll assets and code were hand made by myself. Lumiere was my first attempt at competing in a game jam solely by myself. The theme of the Game Jam was 'Running Out of Power'.\n\n**Engine:** Unity 5.6.0f3",
         "date": "2017-07-01T00:00:00.000Z",
         "assets": {
           "image": "/projects/lumiere.png"
@@ -14,20 +14,20 @@
       },
       {
         "title": "Zeroes",
-        "description": "Game i created for assignment",
+        "description": "A top-down, hero vs enemy, top down game in the style of DotA 2. Made from scratch, mostly using Unreal's Paragon assets for models\n\n**Engine:** Unreal Engine 4.22.3",
         "date": "2020-05-01T00:00:00.000Z",
         "assets": {
           "video": "/projects/zeroes.webm"
         },
         "links": {
-          "github": "https://github.com/JoshLmao/5CS027-Zeroes"
+          "gitlab": "https://gitlab.com/JoshLmao/5cs027-zeroes"
         }
       }
     ],
     "web": [
       {
         "title": "NHS Asset Tracker",
-        "description": "Asset tracker",
+        "description": "For my level 5 module for collaborative development, we created a web application that allows for assets of any type to be added and tracked, either by manual entry or tracked by an Arduino to broadcast it's location.\n\n**Technologies:** [React](https://reactjs.org/), [PHP](https://www.php.net/)",
         "date": "2020-05-01T00:00:00.000Z",
         "links": {
           "github": "https://github.com/5CS024-Team1/asset-tracker-web",
@@ -39,7 +39,7 @@
       },
       {
         "title": "Genify",
-        "description": "Spotify lyrics",
+        "description": "I created a website that allowed users to log in with their [Spotify](https://spotify.com) account to get their current playing track and display the lyrics, gathered from [Genius](https://genius.com).\n\n**Technologies:** [React](https://reactjs.org/), [Spotify Web API](https://developer.spotify.com/documentation/web-api/)",
         "date": "2019-02-01T00:00:00.000Z",
         "links": {
           "github": "https://github.com/JoshLmao/Genify",
@@ -53,7 +53,7 @@
     "other": [
       {
         "title": "Spotify4Unity",
-        "description": "I created a way for",
+        "description": "Spotify4Unity is a plugin for Unity that allows a developer to control",
         "date": "2018-10-01T00:00:00.000Z",
         "assets": {
           "image": "/projects/s4u.gif"
@@ -65,7 +65,7 @@
       },
       {
         "title": "Darkest Dungeon Reddit Bot",
-        "description": "Reddit response bot",
+        "description": "On the [/r/DarkestDungeon](https://reddit.com/r/darkestdungeon) subreddit, I created a bot that would be able to respond to user's comments that were a pure quote from the unforgettable Narrator, voiced by Wayne June.\n\n**Technologies:** Python, [PRAW](https://github.com/praw-dev/praw)",
         "date": "June 2019 GMT",
         "assets": {
           "image": "/projects/ddrb.jpg"

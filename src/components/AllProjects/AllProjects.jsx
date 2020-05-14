@@ -13,12 +13,13 @@ import {
     Input
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faGitlab } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import ReactMarkdown from 'react-markdown';
 import classnames from 'classnames';
 
 import { formatDateToString } from "../utility";
-import projectData from "../projects.json";
+import projectData from "../../data/projects.json";
 
 function LinkBtn (props) {
     return (
@@ -39,8 +40,9 @@ function Project(props) {
                     <h6>{formatDateToString(props.date)}</h6>
                 </div>
                 <div className="d-flex my-auto">
-                    { props.github_link && <LinkBtn link={props.github_link} faIcon={faGithub} /> }
-                    { props.website_link && <LinkBtn link={props.website_link} faIcon={faLink} /> }
+                    { props.github && <LinkBtn link={props.github} faIcon={faGithub} /> }
+                    { props.website && <LinkBtn link={props.website} faIcon={faLink} /> }
+                    { props.gitlab && <LinkBtn link={props.gitlab} faIcon={faGitlab} /> }
                 </div>
             </div>
             <Row>
@@ -55,7 +57,7 @@ function Project(props) {
                     }
                 </Col>
                 <Col md={4}>
-                    <p>{props.description}</p>
+                    <ReactMarkdown source={props.description}></ReactMarkdown>
                 </Col>
             </Row>
         </div>
@@ -123,8 +125,10 @@ class AllProjects extends Component {
                         date={value.date}
                         img_path={value.assets?.image ? value.assets.image : null} 
                         video_path={value.assets?.video ? value.assets.video : null}
-                        github_link={value.links?.github ? value.links.github : null}
-                        website_link={value.links?.website ? value.links.website : null} />
+                        github={value.links?.github ? value.links.github : null}
+                        gitlab={value.links?.gitlab ? value.links.gitlab : null} 
+                        website={value.links?.website ? value.links.website : null} 
+                        />
         }
 
         return (

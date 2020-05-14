@@ -8,12 +8,13 @@ import {
     CardColumns,
     Button
 } from 'reactstrap';
+import ReactMarkdown from 'react-markdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 import { formatDateToString } from "../utility";
-import projectData from "../projects.json";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import projectData from "../../data/projects.json";
 
 function getMostRecentFromArray (array) {
     var sorted = array.sort(function(a, b) {
@@ -28,6 +29,16 @@ function getMostRecentFromArray (array) {
         return sorted[0];
     else
         return array[0];
+}
+
+function LinkBtn(props) {
+    return (
+        <a href={props.link} className="pl-2">
+            <Button outline>
+                <FontAwesomeIcon icon={props.icon} />
+            </Button>
+        </a>
+    )
 }
 
 class Featured extends Component {
@@ -65,8 +76,7 @@ class Featured extends Component {
         return (
             <div>
                 <h2>Featured Work</h2>
-                <p>Latest projects</p>
-                <CardColumns>
+                <CardColumns className="pt-3">
                     {
                         this.state.featured && this.state.featured.map((value) => {
                             return (
@@ -81,9 +91,9 @@ class Featured extends Component {
                                                             </video>
                                     }
                                     <CardBody>
-                                            {
-                                                value.short_description ? value.short_description : value.description
-                                            }
+                                        <ReactMarkdown>
+                                            { value.short_description ? value.short_description : value.description }
+                                        </ReactMarkdown>
                                     </CardBody>
                                     <CardFooter>
                                         <div className="d-flex">
@@ -93,19 +103,15 @@ class Featured extends Component {
                                             <div className="ml-auto">
                                                 {
                                                     value.links && value.links.github && 
-                                                        <a href={value.links.github}>
-                                                            <Button outline>
-                                                                <FontAwesomeIcon icon={faGithub} />
-                                                            </Button>
-                                                        </a>
+                                                        <LinkBtn link={value.links.github} icon={faGithub} />
                                                 }
                                                 {
                                                     value.links && value.links.website &&
-                                                        <a href={value.links.website} className="pl-2">
-                                                            <Button outline>
-                                                                <FontAwesomeIcon icon={faLink} />
-                                                            </Button>
-                                                        </a>
+                                                        <LinkBtn link={value.links.website} icon={faLink} />
+                                                }
+                                                {
+                                                    value.links && value.links.gitlab &&
+                                                        <LinkBtn link={value.links.gitlab} icon={faGitlab} />
                                                 }
                                             </div>
                                         </div>
