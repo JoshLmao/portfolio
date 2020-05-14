@@ -1,54 +1,13 @@
 import React, { Component } from 'react';
 import { 
     Container,
-    Row,
-    Col
 } from 'reactstrap';
-import ReactMarkdown from 'react-markdown';
 
 import Featured from "../Featured";
 import Introduction from '../Introduction';
+import About from "../About";
 import "./Home.css";
 import portfolioData from "../../data/portfolio.json";
-
-function AboutMe(props) {
-    return (
-        <div>
-            <h2>About Me</h2>
-            <div className="ml-5">
-                <ReactMarkdown>
-                    { props.about }
-                </ReactMarkdown>
-            </div>
-        </div>
-    );
-}
-
-function Skills(props) {
-    return (
-        <div>
-            <h2>Skills/Experience</h2>
-            <Row>
-                <Col md={6} className="d-flex skill-column px-5">
-                    <div>
-                        <h4>Core</h4>
-                        <h6>C#, C++, Python, Javascript</h6>
-                        <h6>.NET Framework</h6>
-                        <h6>Object Oriented Programming (OOP)</h6>
-                    </div>
-                </Col>
-                <Col md={6} className="d-flex skill-column px-5">
-                    <div>
-                        <h4>Tools</h4>
-                        <h6>Unreal Engine, Unity, React, NodeJS, Node Package Manager (NPM)</h6>
-                        <h6>WPF, Xamarin</h6>
-                        <h6>Git, Agile, GitKraken</h6>
-                    </div>
-                </Col>
-            </Row>
-        </div>
-    );
-}
 
 function Contact(props) {
     return (
@@ -72,29 +31,38 @@ class Home extends Component {
             data: portfolioData,
         };
     }
+
     render() {
         return (
-            <Container>
+            <div>
                 <header className="page-header px-5 mb-5">
-                    <Introduction />
+                    <Container>
+                        <Introduction />
+                    </Container>
                 </header>
                 
-                <section className="p-5 my-5" id="about">
-                    <AboutMe about={this.state.data?.about} />
-                </section>
-                
-                <section className="px-5 mb-5" id="skills">
-                    <Skills />
-                </section>
-
-                <section className="p-5 my-5" id="featured">
-                    <Featured />
+                <section className="p-5 my-5 alternative-section" id="about">
+                    <Container>
+                        <About 
+                            about={this.state.data?.about} 
+                            coreSkills={this.state.data?.skills?.core} 
+                            tools={this.state.data?.skills?.tools}
+                            />
+                    </Container>
                 </section>
 
-                <section className="p-5 my-5" id="contact">
-                    <Contact twitterLink={this.state.data.links.twitter}/>
+                <section className="p-5 my-5 " id="featured">
+                    <Container>
+                        <Featured />
+                    </Container>
                 </section>
-            </Container>
+
+                <section className="p-5 my-5 alternative-section" id="contact">
+                    <Container>
+                        <Contact twitterLink={this.state.data.links.twitter}/>
+                    </Container>
+                </section>
+            </div>
         );
     }
 }

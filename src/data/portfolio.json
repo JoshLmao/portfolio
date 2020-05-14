@@ -1,8 +1,31 @@
 {
     "name": "Josh Shepherd",
+    "tagline": "My name is Josh Shepherd, a passionate and experienced games developer",
     "picture": "/profile.jpg",
     "email": "josh_shepherd@outlook.com",
-    "about": "Hi! My name is Josh and I love coding, music and video games. I've been programming since I started learning in 2015 and have always had a massive interest in playing and creating video games. I'm a big fan of open source coding and making the things I create available to people for free.",
+    "about": "Hi! My name is Josh and I love coding, music and video games! I've been programming since I started learning in 2015 and have always had a massive interest in playing and creating video games.\n\nI will graduate from the University of Wolverhampton in 2021, studying Computer Science specializing in games development. Before University, I found my love for programming at an apprenticeship, where I began by working on projects such as assisting on a Unreal Engine 4 game, to developing a WPF application in C# for 3 years. Since then, I have consistently worked on projects in my own time and continued to develop myself and my skills.\n\nI have been learning Chinese since 2016 and can speak to a near proficient level, but can understand and communicate effectively in reading and writing.",
+    "skills": {
+      "core": [
+        "C#",
+        "C++",
+        "Python",
+        "Javascript",
+        ".NET Framework",
+        "Object Oriented Programming (OOP)"
+      ],
+      "tools": [
+        "Unreal Engine",
+        "Unity",
+        "React",
+        "NodeJS",
+        "Node Package Manager (NPM)",
+        "WPF",
+        "Xamarin",
+        "Git",
+        "Agile",
+        "GitKraken"
+      ]
+    },
     "links": {
       "twitter": "https://twitter.com/JoshLmao",
       "linkedin": "https://linkedin.com/in/joshshepherd-",

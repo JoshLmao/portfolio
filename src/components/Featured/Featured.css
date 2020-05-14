@@ -1,0 +1,8 @@
+:root {
+    --card-bg-color: rgba(19, 18, 24, 255);
+}
+
+.featured-card {
+    background: var(card-bg-color)!important;
+    border-color: var(--card-color);
+}

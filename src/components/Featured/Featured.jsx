@@ -15,6 +15,7 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 import { formatDateToString } from "../utility";
 import projectData from "../../data/projects.json";
+import './Featured.css';
 
 function getMostRecentFromArray (array) {
     var sorted = array.sort(function(a, b) {
@@ -76,20 +77,24 @@ class Featured extends Component {
         return (
             <div>
                 <h2>Featured Work</h2>
-                <CardColumns className="pt-3">
+                <CardColumns className="pt-3" style={{color: "black"}}>
                     {
                         this.state.featured && this.state.featured.map((value) => {
                             return (
-                                <Card className="">
-                                    <CardHeader><h4>{value.title}</h4></CardHeader>
-                                    {
-                                        value.assets.image && <CardImg top width="100%" src={value.assets.image}></CardImg>
-                                    }
-                                    {
-                                        value.assets.video && <video className="w-100" controls>
-                                                                <source src={process.env.PUBLIC_URL + value.assets.video} type="video/webm"/>
-                                                            </video>
-                                    }
+                                <Card className="featured-card" key={value.title} color="secondary" outline>
+                                    <CardHeader>
+                                        <h4>{value.title}</h4>
+                                    </CardHeader>
+                                        <div className="p-2"> {/*className="p-2"*/} 
+                                            {
+                                                value.assets.image && <CardImg top width="100%" src={value.assets.image}></CardImg>
+                                            }
+                                            {
+                                                value.assets.video && <video className="w-100" controls>
+                                                                        <source src={process.env.PUBLIC_URL + value.assets.video} type="video/webm"/>
+                                                                    </video>
+                                            }
+                                        </div>
                                     <CardBody>
                                         <ReactMarkdown>
                                             { value.short_description ? value.short_description : value.description }

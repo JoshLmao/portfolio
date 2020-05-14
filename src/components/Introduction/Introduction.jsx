@@ -9,6 +9,8 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 import portfolioData from "../../data/portfolio.json";
+import './Introduction.css';
+import ReactMarkdown from 'react-markdown';
 
 function FeaturedBtn(props) {
     return (
@@ -32,9 +34,13 @@ class Introduction extends Component {
     render() {
         return (
             <Row>
-            <Col md={9}>
+            <Col md={9} className="pr-5">
                 <h1>Welcome!</h1>
-                <h4>My name is <span>{this.state.data.name}</span>, a passionate and experienced games developer</h4>
+                <h4 className="tagline">
+                    <ReactMarkdown>
+                        {this.state.data.tagline}
+                    </ReactMarkdown>
+                </h4>
                 <div className="d-flex pt-3">
                     {
                         this.state.data.email && 
