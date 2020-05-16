@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-    BrowserRouter,
+    HashRouter,
     Switch,
     Route 
 } from 'react-router-dom';
@@ -13,7 +13,7 @@ import "./App.css";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <NavigationBar />
             
             <Switch data-spy="scroll" data-target=".navbar">
@@ -25,7 +25,7 @@ function App() {
                 {/* Cover 404, page not found */}
                 <Route component={FourOhFour} />
             </Switch>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 

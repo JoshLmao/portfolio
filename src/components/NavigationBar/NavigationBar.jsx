@@ -9,11 +9,13 @@ import {
     NavLink,
     Container
 } from 'reactstrap';
+import { NavHashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import "./NavigationBar.css";
 import { links, brand, cv } from "../../data/portfolio.json";
+import { Link } from 'react-router-dom';
 
 class NavigationBar extends Component {
     constructor(props) {
@@ -45,13 +47,14 @@ class NavigationBar extends Component {
                     <Collapse navbar isOpen={this.state.isOpen}>
                         <Nav className="mr-auto" navbar>
                             <NavItem className="mx-3">
-                                <NavLink className="navbar-link" href="/#about">about</NavLink>
+                                {/* Using special NavHashLink to allow scrollspy to work*/}
+                                <NavHashLink className="navbar-link nav-link" to="/#about">about</NavHashLink>
                             </NavItem>
                             <NavItem className="mx-3">
-                                <NavLink className="navbar-link" href="/#featured">featured</NavLink>
+                                <NavHashLink className="navbar-link nav-link" to="/#featured">featured</NavHashLink>
                             </NavItem>
                             <NavItem className="mx-3">
-                                <NavLink className="navbar-link" href="/#contact">contact</NavLink>
+                                <NavHashLink className="navbar-link nav-link" to="/#contact">contact</NavHashLink>
                             </NavItem>
                             <NavItem className="mx-3">
                                 <NavLink className="navbar-link" href={this.state.cvLink}>cv</NavLink>
@@ -60,7 +63,7 @@ class NavigationBar extends Component {
                         {/* Right hand docked nav bar */}
                         <Nav>
                             <NavItem className="mx-3">
-                                <NavLink className="navbar-link" href="/projects">projects</NavLink>
+                                <NavLink className="navbar-link" tag={Link} to="/projects">projects</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink className="navbar-link" href={this.state.links.twitter}>
