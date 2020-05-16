@@ -10,6 +10,7 @@ import NavigationBar from '../NavigationBar';
 import FourOhFour from '../FourOhFour';
 import AllProjects from "../AllProjects";
 import "./App.css";
+import "../../fonts/jost/Jost.css";
 
 function App() {
     return (

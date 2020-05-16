@@ -41,7 +41,7 @@ class Introduction extends Component {
                         {this.state.data.tagline}
                     </ReactMarkdown>
                 </h4>
-                <div className="d-flex pt-3">
+                <div className="d-flex pt-3 pb-5">
                     {
                         this.state.data.email && 
                             <FeaturedBtn icon={faEnvelope} link={'mailto:' + this.state.data.email} title="Send me an Email" />

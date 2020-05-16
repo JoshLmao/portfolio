@@ -43,7 +43,7 @@ class NavigationBar extends Component {
             <Navbar light expand="md" className="navbar">
                 <Container>
                     <NavbarBrand href="/" className="navbar-brand">{this.state.brand}</NavbarBrand>
-                    <NavbarToggler onClick={this.toggleNavbar} />
+                    <NavbarToggler onClick={this.toggleNavbar} className="navbar-dark" />
                     <Collapse navbar isOpen={this.state.isOpen}>
                         <Nav className="mr-auto" navbar>
                             <NavItem className="mx-3">
@@ -61,11 +61,11 @@ class NavigationBar extends Component {
                             </NavItem>
                         </Nav>
                         {/* Right hand docked nav bar */}
-                        <Nav>
+                        <Nav navbar>
                             <NavItem className="mx-3">
                                 <NavLink className="navbar-link" tag={Link} to="/projects">projects</NavLink>
                             </NavItem>
-                            <NavItem>
+                            <NavItem className="mx-3">
                                 <NavLink className="navbar-link" href={this.state.links.twitter}>
                                     <FontAwesomeIcon icon={faTwitter} />
                                 </NavLink>
