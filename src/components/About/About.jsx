@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { 
     Row,
-    Col,
-    ListGroup,
-    ListGroupItem
+    Col
 } from 'reactstrap';
 import ReactMarkdown from 'react-markdown';
 

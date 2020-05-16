@@ -9,6 +9,7 @@ import Home from '../Home';
 import NavigationBar from '../NavigationBar';
 import FourOhFour from '../FourOhFour';
 import AllProjects from "../AllProjects";
+import "./App.css";
 
 function App() {
     return (

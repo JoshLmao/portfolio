@@ -13,7 +13,7 @@ import {
     Input
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faGitlab } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faGitlab, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import ReactMarkdown from 'react-markdown';
 import classnames from 'classnames';
@@ -43,6 +43,7 @@ function Project(props) {
                     { props.github && <LinkBtn link={props.github} faIcon={faGithub} /> }
                     { props.website && <LinkBtn link={props.website} faIcon={faLink} /> }
                     { props.gitlab && <LinkBtn link={props.gitlab} faIcon={faGitlab} /> }
+                    { props.youtube && <LinkBtn link={props.youtube} faIcon={faYoutube} /> }
                 </div>
             </div>
             <Row>
@@ -128,6 +129,7 @@ class AllProjects extends Component {
                         github={value.links?.github ? value.links.github : null}
                         gitlab={value.links?.gitlab ? value.links.gitlab : null} 
                         website={value.links?.website ? value.links.website : null} 
+                        youtube={value.links?.youtube ? value.links.youtube : null}
                         />
         }
 

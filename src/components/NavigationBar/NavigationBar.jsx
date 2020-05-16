@@ -13,7 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import "./NavigationBar.css";
-import { links } from "../../data/portfolio.json";
+import { links, brand, cv } from "../../data/portfolio.json";
 
 class NavigationBar extends Component {
     constructor(props) {
@@ -22,6 +22,8 @@ class NavigationBar extends Component {
         this.state = {
             isOpen: false,
             links: links,
+            brand: brand,
+            cvLink: cv,
         };
 
         this.toggleNavbar = this.toggleNavbar.bind(this);
@@ -38,7 +40,7 @@ class NavigationBar extends Component {
         return (
             <Navbar light expand="md" className="navbar">
                 <Container>
-                    <NavbarBrand href="/" className="navbar-brand">joshlmao</NavbarBrand>
+                    <NavbarBrand href="/" className="navbar-brand">{this.state.brand}</NavbarBrand>
                     <NavbarToggler onClick={this.toggleNavbar} />
                     <Collapse navbar isOpen={this.state.isOpen}>
                         <Nav className="mr-auto" navbar>
@@ -52,7 +54,7 @@ class NavigationBar extends Component {
                                 <NavLink className="navbar-link" href="/#contact">contact</NavLink>
                             </NavItem>
                             <NavItem className="mx-3">
-                                <NavLink className="navbar-link" href="/cv.pdf">cv</NavLink>
+                                <NavLink className="navbar-link" href={this.state.cvLink}>cv</NavLink>
                             </NavItem>
                         </Nav>
                         {/* Right hand docked nav bar */}

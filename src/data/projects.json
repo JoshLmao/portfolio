@@ -20,14 +20,15 @@
           "video": "/projects/zeroes.webm"
         },
         "links": {
-          "gitlab": "https://gitlab.com/JoshLmao/5cs027-zeroes"
+          "gitlab": "https://github.com/JoshLmao/5CS027-Zeroes",
+          "youtube": "https://youtu.be/HmhtK7DlICc"
         }
       }
     ],
     "web": [
       {
         "title": "NHS Asset Tracker",
-        "description": "For my level 5 module for collaborative development, we created a web application that allows for assets of any type to be added and tracked, either by manual entry or tracked by an Arduino to broadcast it's location.\n\n**Technologies:** [React](https://reactjs.org/), [PHP](https://www.php.net/)",
+        "description": "For a level 5 module at University titled 'Collaborative Development', we created a web application that allows for assets of any type to be added and tracked, either by manual entry or tracked by an Arduino to broadcast it's location.\n\n**Technologies:** [React](https://reactjs.org/), [PHP](https://www.php.net/)",
         "date": "2020-05-01T00:00:00.000Z",
         "links": {
           "github": "https://github.com/5CS024-Team1/asset-tracker-web",
@@ -53,7 +54,7 @@
     "other": [
       {
         "title": "Spotify4Unity",
-        "description": "Spotify4Unity is a plugin for Unity that allows a developer to control",
+        "description": "Spotify4Unity is a plugin which helps you integrate Spotify connectivity into you Unity game/application easily, allowing users to use basic track control functionality to viewing their whole library.\n\n**Technologies:** Unity, [SpotifyAPI-NET](https://github.com/JohnnyCrazy/SpotifyAPI-NET)",
         "date": "2018-10-01T00:00:00.000Z",
         "assets": {
           "image": "/projects/s4u.gif"
@@ -66,7 +67,7 @@
       {
         "title": "Darkest Dungeon Reddit Bot",
         "description": "On the [/r/DarkestDungeon](https://reddit.com/r/darkestdungeon) subreddit, I created a bot that would be able to respond to user's comments that were a pure quote from the unforgettable Narrator, voiced by Wayne June.\n\n**Technologies:** Python, [PRAW](https://github.com/praw-dev/praw)",
-        "date": "June 2019 GMT",
+        "date": "2019-06-01T00:00:00.000Z",
         "assets": {
           "image": "/projects/ddrb.jpg"
         },

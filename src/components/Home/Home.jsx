@@ -13,7 +13,7 @@ function Contact(props) {
     return (
         <div>
             <h2>Contact</h2>
-            <p>If you wish to get in touch with me about my projects, my work or anything else, send me an email: josh_shepherd@outlook.com
+                <p>If you wish to get in touch with me about my projects, my work or anything else, send me an email: <a href={'mailto:' + props.email}>{props.email}</a>
                 <br /><br />
                 However, if you have a question or require anything informal like help, drop me a message on Twitter as I can reply a lot quicker!
                 <br />
@@ -35,13 +35,13 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <header className="page-header px-5 mb-5">
+                <header className="page-header px-5">
                     <Container>
                         <Introduction />
                     </Container>
                 </header>
                 
-                <section className="p-5 my-5 alternative-section" id="about">
+                <section className="p-5 alternative-section" id="about">
                     <Container>
                         <About 
                             about={this.state.data?.about} 
@@ -51,15 +51,15 @@ class Home extends Component {
                     </Container>
                 </section>
 
-                <section className="p-5 my-5 " id="featured">
+                <section className="p-5" id="featured">
                     <Container>
                         <Featured />
                     </Container>
                 </section>
 
-                <section className="p-5 my-5 alternative-section" id="contact">
+                <section className="p-5 alternative-section" id="contact">
                     <Container>
-                        <Contact twitterLink={this.state.data.links.twitter}/>
+                        <Contact twitterLink={this.state.data.links.twitter} email={this.state.data.email}/>
                     </Container>
                 </section>
             </div>

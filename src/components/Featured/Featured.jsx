@@ -10,7 +10,7 @@ import {
 } from 'reactstrap';
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGitlab, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 import { formatDateToString } from "../utility";
@@ -117,6 +117,10 @@ class Featured extends Component {
                                                 {
                                                     value.links && value.links.gitlab &&
                                                         <LinkBtn link={value.links.gitlab} icon={faGitlab} />
+                                                }
+                                                {
+                                                    value.links && value.links.youtube &&
+                                                        <LinkBtn link={value.links.youtube} icon={faYoutube} />
                                                 }
                                             </div>
                                         </div>

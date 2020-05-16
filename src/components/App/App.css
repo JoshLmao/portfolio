@@ -1,0 +1,25 @@
+/* "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif */
+
+/* Using Jost font 
+ * https://github.com/indestructible-type/Jost/tree/master */
+@import url('https://indestructibletype.com/fonts/Jost.css');
+
+body {
+    font-family: 'Jost';
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Jost';
+    font-weight: 500!important;
+}
+
+h5, h6 {
+    font-family: 'Jost';
+    font-weight: 450!important;
+}
+
+p {
+    font-family: 'Jost';
+    font-weight: 300!important;
+    font-size: 1.20rem!important;
+}
