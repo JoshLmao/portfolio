@@ -2,6 +2,8 @@
 
 React application to build my portfolio. Most data is loaded from within `/src/data/*.json` files. The app is targeted to be hosted as a static webpage and uses [react-router-dom](https://www.npmjs.com/package/react-router-dom)'s HashRouter to best handle the site having routes
 
+Visit the website: [JoshLmao.com](https://joshlmao.com/#/)
+
 ## Available Scripts
 
 In the project directory, you can run:
