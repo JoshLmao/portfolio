@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { 
     Collapse,
     Navbar,
@@ -15,7 +16,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import "./NavigationBar.css";
 import { links, brand, cv } from "../../data/portfolio.json";
-import { Link } from 'react-router-dom';
+let pkg = require('../../../package.json');
 
 class NavigationBar extends Component {
     constructor(props) {
@@ -42,7 +43,9 @@ class NavigationBar extends Component {
         return (
             <Navbar light expand="md" className="navbar">
                 <Container>
-                    <NavbarBrand href="/" className="navbar-brand">{this.state.brand}</NavbarBrand>
+                    <NavbarBrand href="/" className="navbar-brand" title={'portfolio v' + pkg.version}>
+                        {this.state.brand}
+                    </NavbarBrand>
                     <NavbarToggler onClick={this.toggleNavbar} className="navbar-dark" />
                     <Collapse navbar isOpen={this.state.isOpen}>
                         <Nav className="mr-auto" navbar>
