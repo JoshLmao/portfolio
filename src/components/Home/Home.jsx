@@ -53,8 +53,9 @@ class Home extends Component {
 
                 <section className="p-5" id="featured">
                     <Container>
-                        <Featured />
+                    <Featured />
                     </Container>
+                    
                 </section>
 
                 <section className="p-5 alternative-section" id="contact">

@@ -20,15 +20,37 @@
           "video": "/projects/zeroes.webm"
         },
         "links": {
-          "gitlab": "https://github.com/JoshLmao/5CS027-Zeroes",
+          "gitlab": "https://gitlab.com/JoshLmao/5CS027-Zeroes",
           "youtube": "https://youtu.be/HmhtK7DlICc"
+        }
+      },
+      {
+        "title": "Project Boss - Dissertation Project",
+        "description": "My year-long dissertation project for my University Bachelors degree. I created an Artificially Intelligent character, inside Unreal Engine 4.25, that is able to adapt itself to the skill of the player. The character uses machine learning to update costs within the AI's Goal Oriented Action Planning (GOAP) system to determine the best actions to take.  \n\n **Engine**: Unreal Engine 4.25.4",
+        "date": "2021-05-01T00:00:00.000Z",
+        "assets": {
+          "video": "/projects/project_boss.webm"
+        },
+        "links": {
+          "github": "https://github.com/JoshLmao/6CS007-ProjectBoss"
+        }
+      },
+      {
+        "title": "Quinn's Escape",
+        "description": "I worked together with a partner to create a design document of a video game that we would create. We designed a 2.5D, mario-like video game in which the player has to defeat enemies to escape from an abandoned shop. The player gains score from finding secret puzzles and killing enemies, and defeating the final boss.  \n\n **Engine**: Unreal Engine 4.22.3",
+        "date": "2021-05-01T00:00:00.000Z",
+        "assets": {
+          "image": "/img/wip.png"
+        },
+        "links": {
+          "github": "https://github.com/JoshLmao/6CS025-QuinnsEscape"
         }
       }
     ],
     "web": [
       {
         "title": "NHS Asset Tracker",
-        "description": "For a level 5 module at University titled 'Collaborative Development', we created a web application that allows for assets of any type to be added and tracked, either by manual entry or tracked by an Arduino to broadcast it's location.\n\n**Technologies:** [React](https://reactjs.org/), [PHP](https://www.php.net/)",
+        "description": "For my level 5 module for collaborative development, we created a web application that allows for assets of any type to be added and tracked, either by manual entry or tracked by an Arduino to broadcast it's location.  \n\n**Technologies:** [React](https://reactjs.org/), [PHP](https://www.php.net/)",
         "date": "2020-05-01T00:00:00.000Z",
         "links": {
           "github": "https://github.com/5CS024-Team1/asset-tracker-web",
@@ -40,7 +62,7 @@
       },
       {
         "title": "Genify",
-        "description": "I created a website that allowed users to log in with their [Spotify](https://spotify.com) account to get their current playing track and display the lyrics, gathered from [Genius](https://genius.com).\n\n**Technologies:** [React](https://reactjs.org/), [Spotify Web API](https://developer.spotify.com/documentation/web-api/)",
+        "description": "I created a website that allowed users to log in with their [Spotify](https://spotify.com) account to get their current playing track and display the lyrics, gathered from [Genius](https://genius.com).  \n\n**Technologies:** [React](https://reactjs.org/), [Spotify Web API](https://developer.spotify.com/documentation/web-api/)",
         "date": "2019-02-01T00:00:00.000Z",
         "links": {
           "github": "https://github.com/JoshLmao/Genify",

@@ -15,21 +15,41 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 import { formatDateToString } from "../utility";
 import projectData from "../../data/projects.json";
+import portfolioData from "../../data/portfolio.json";
 import './Featured.css';
+import CardDeck from 'reactstrap/lib/CardDeck';
 
-function getMostRecentFromArray (array) {
-    var sorted = array.sort(function(a, b) {
-        var dateA = a.date, dateB = b.date;
-        if( dateA < dateB)
-            return 1;
-        else 
-            return -1;
+// Filters an array by a given title
+function filterByTitle(filterArray, title) {
+    console.log(title);
+    console.log(filterArray);
+    return filterArray.filter(function(x) {
+        if (x.title === title) {
+            return x;
+        }
+        return null;
     });
+}
 
-    if (sorted.length >= 0)
-        return sorted[0];
-    else
-        return array[0];
+// Searches all projects property in portfolio.json for project by title
+function findProjectFromTitle (allProjects, title) {
+    // Search 'Games' projects for target project by title
+    var found = filterByTitle(allProjects.games, title);
+    if (found && found.length > 0) {
+        return found[0];
+    }
+    // Search 'Web' projects for target project by title
+    found = filterByTitle(allProjects.web, title);
+    if (found && found.length > 0) {
+        return found[0];
+    }
+    // Search 'Other' projects for target project by title
+    found = filterByTitle(allProjects.other, title);
+    if (found && found.length > 0) {
+        return found[0];
+    }
+    // Can't find, return null
+    return null;
 }
 
 function LinkBtn(props) {
@@ -53,20 +73,17 @@ class Featured extends Component {
 
     componentDidMount() {
         // Create featured array by getting latest project in each other array
-        if(this.state.allProjects) {
+        if(this.state.allProjects && portfolioData.featured) {
             var featured = [];
-            if (this.state.allProjects.games) {
-                featured.push(getMostRecentFromArray(this.state.allProjects.games));
+
+            // Loop over each featured to find the project and add to display
+            for(var i = 0; i < portfolioData.featured.length; i++) {
+                var found = findProjectFromTitle(this.state.allProjects, portfolioData.featured[i]);
+                if (found)
+                    featured.push(found);
             }
 
-            if (this.state.allProjects.web) {
-                featured.push(getMostRecentFromArray(this.state.allProjects.web));
-            }
-
-            if (this.state.allProjects.other) {
-                featured.push(getMostRecentFromArray(this.state.allProjects.other));
-            }
-
+            console.log(featured);
             this.setState({
                 featured: featured,
             });
@@ -75,24 +92,29 @@ class Featured extends Component {
 
     render() {
         return (
-            <div>
+            <div className="">
                 <h2>Featured Work</h2>
-                <CardColumns className="pt-3" style={{color: "black"}}>
+                <CardDeck className="pt-3" style={{color: "black"}}>
                     {
-                        this.state.featured && this.state.featured.map((value) => {
+                        this.state.featured && this.state.featured.map((value, index) => {
                             return (
-                                <Card className="featured-card" key={value.title} color="secondary" outline>
+                                <Card 
+                                    className="featured-card" 
+                                    key={index} 
+                                    color="secondary" outline>
                                     <CardHeader>
                                         <h4>{value.title}</h4>
                                     </CardHeader>
                                         <div className="p-2"> {/*className="p-2"*/} 
                                             {
-                                                value.assets.image && <CardImg top width="100%" src={value.assets.image}></CardImg>
+                                                value.assets && value.assets.image && 
+                                                    <CardImg top width="100%" alt={value.title} src={value.assets.image}></CardImg>
                                             }
                                             {
-                                                value.assets.video && <video className="w-100" controls>
-                                                                        <source src={process.env.PUBLIC_URL + value.assets.video} type="video/webm"/>
-                                                                    </video>
+                                                value.assets && value.assets.video && 
+                                                    <video className="w-100" controls>
+                                                        <source src={process.env.PUBLIC_URL + value.assets.video} type="video/webm"/>
+                                                    </video>
                                             }
                                         </div>
                                     <CardBody>
@@ -129,7 +151,7 @@ class Featured extends Component {
                             )
                         })
                     }
-                </CardColumns>
+                </CardDeck>
             </div>
         );
     }

@@ -38,7 +38,9 @@ class Introduction extends Component {
                 <h1>Welcome!</h1>
                 <h4 className="tagline">
                     <ReactMarkdown>
-                        {this.state.data.tagline}
+                        {
+                            this.state.data.tagline
+                        }
                     </ReactMarkdown>
                 </h4>
                 <div className="d-flex pt-3 pb-5">
