@@ -26,10 +26,10 @@
       },
       {
         "title": "Project Boss - Dissertation Project",
-        "description": "My year-long dissertation project for my University Bachelors degree. I created an Artificially Intelligent character, inside Unreal Engine 4.25, that is able to adapt itself to the skill of the player. The character uses machine learning to update costs within the AI's Goal Oriented Action Planning (GOAP) system to determine the best actions to take.  \n\n **Engine**: Unreal Engine 4.25.4",
+        "description": "My year-long dissertation project for my University Bachelors degree. I created an Artificially Intelligent character, inside Unreal Engine 4.25, that is able to adapt itself to the skill of the player. The character uses machine learning to update costs within the AI's Goal Oriented Action Planning (GOAP) system to determine the best actions to take. More information can be found on the [Github repository](https://github.com/joshlmao/6CS007-ProjectBoss)  \n\n **Engine**: Unreal Engine 4.25.4",
         "date": "2021-05-01T00:00:00.000Z",
         "assets": {
-          "video": "/projects/project_boss.webm"
+          "video": "/projects/project_boss.mp4"
         },
         "links": {
           "github": "https://github.com/JoshLmao/6CS007-ProjectBoss"
@@ -71,6 +71,18 @@
         "assets": {
           "image": "/projects/genify.jpg"
         }
+      },
+      {
+          "title": "foresight",
+          "description": "Foresight is a web app with the aim of calculating hero and ability damage for the game [DotA 2](https://store.steampowered.com/app/570/). The app allows users to select a hero, their level and their items and will display the resulting ability damage. The data is all loaded from core JSON files that also power the game.\n\n **Technologies:** [React](https://reactjs.org/)",
+          "date": "2020-07-01T00:00:00Z",
+          "links": {
+              "github": "https://github.com/joshlmao/foresight",
+              "website": "https://foresight.joshlmao.com/"
+          },
+          "assets": {
+              "image": "/projects/foresight-preview.jpg"
+          }
       }
     ],
     "other": [
