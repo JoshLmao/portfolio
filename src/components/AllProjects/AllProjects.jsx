@@ -13,8 +13,17 @@ import {
     Input
 } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faGitlab, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { 
+    faGithub, 
+    faGitlab, 
+    faYoutube,
+    faAppStore,
+    faGooglePlay
+} from "@fortawesome/free-brands-svg-icons";
+import { 
+    faDownload, 
+    faLink 
+} from "@fortawesome/free-solid-svg-icons";
 import ReactMarkdown from 'react-markdown';
 import classnames from 'classnames';
 
@@ -23,8 +32,8 @@ import projectData from "../../data/projects.json";
 
 function LinkBtn (props) {
     return (
-        <a href={props.link} className="mx-1">
-            <Button outline color="primary">
+        <a href={props.link} className="mx-1" >
+            <Button outline color="primary" title={props.title}>
                 <FontAwesomeIcon icon={props.faIcon} />
             </Button>
         </a>
@@ -46,10 +55,14 @@ function Project(props) {
                     </div>
                 </div>
                 <div className="d-flex my-auto">
-                    { props.github && <LinkBtn link={props.github} faIcon={faGithub} /> }
-                    { props.website && <LinkBtn link={props.website} faIcon={faLink} /> }
-                    { props.gitlab && <LinkBtn link={props.gitlab} faIcon={faGitlab} /> }
-                    { props.youtube && <LinkBtn link={props.youtube} faIcon={faYoutube} /> }
+                    {/* All hyperlinks of the project */}
+                    { props.github && <LinkBtn link={props.github} faIcon={faGithub} title="Github" /> }
+                    { props.website && <LinkBtn link={props.website} faIcon={faLink} title="Website" /> }
+                    { props.gitlab && <LinkBtn link={props.gitlab} faIcon={faGitlab} title="Gitlab" /> }
+                    { props.youtube && <LinkBtn link={props.youtube} faIcon={faYoutube} title="YouTube" /> }
+                    { props.google_play_store && <LinkBtn link={props.google_play_store} faIcon={faGooglePlay} title="Google Play Store" /> }
+                    { props.apple_app_store && <LinkBtn link={props.apple_app_store} faIcon={faAppStore} title="Apple App Store" /> }
+                    { props.download && <LinkBtn link={props.download} faIcon={faDownload} title="Download" /> }
                 </div>
             </div>
             <Row>
@@ -162,6 +175,9 @@ class AllProjects extends Component {
                         gitlab={value.links?.gitlab ? value.links.gitlab : null} 
                         website={value.links?.website ? value.links.website : null} 
                         youtube={value.links?.youtube ? value.links.youtube : null}
+                        google_play_store={value.links?.google_play_store ? value.links.google_play_store : null}
+                        apple_app_store={value.links?.apple_app_store ? value.links.apple_app_store : null}
+                        download={value.links?.download ? value.links.download : null}
                         />
         }
 

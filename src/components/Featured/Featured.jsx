@@ -5,7 +5,6 @@ import {
     CardFooter, 
     CardImg, 
     CardHeader, 
-    CardColumns,
     Button
 } from 'reactstrap';
 import ReactMarkdown from 'react-markdown';
@@ -22,7 +21,7 @@ import CardDeck from 'reactstrap/lib/CardDeck';
 // Filters an array by a given title
 function filterByTitle(filterArray, title) {
     return filterArray.filter(function(x) {
-        if (x.title === title) {
+        if (x.title.toLowerCase() === title.toLowerCase()) {
             return x;
         }
         return null;
@@ -32,7 +31,7 @@ function filterByTitle(filterArray, title) {
 // Searches all projects property in portfolio.json for project by title
 function findProjectFromTitle (allProjects, title) {
     // Search 'Games' projects for target project by title
-    var found = filterByTitle(allProjects.games, title);
+    let found = filterByTitle(allProjects.games, title);
     if (found && found.length > 0) {
         return found[0];
     }
@@ -72,11 +71,11 @@ class Featured extends Component {
     componentDidMount() {
         // Create featured array by getting latest project in each other array
         if(this.state.allProjects && portfolioData.featured) {
-            var featured = [];
+            let featured = [];
 
             // Loop over each featured to find the project and add to display
-            for(var i = 0; i < portfolioData.featured.length; i++) {
-                var found = findProjectFromTitle(this.state.allProjects, portfolioData.featured[i]);
+            for(let i = 0; i < portfolioData.featured.length; i++) {
+                let found = findProjectFromTitle(this.state.allProjects, portfolioData.featured[i]);
                 if (found)
                     featured.push(found);
                 else

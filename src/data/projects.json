@@ -17,30 +17,30 @@
         "title": "Zeroes",
         "description": "A top-down, hero vs enemy, top down game in the style of DotA 2. Made from scratch, mostly using Unreal's Paragon assets for models\n\n**Engine:** Unreal Engine 4.22.3",
         "date": "2020-05-01T00:00:00.000Z",
-        "subtitle": "University project",
+        "subtitle": "Dissertation project",
         "assets": {
           "video": "/projects/zeroes.webm"
         },
         "links": {
-          "gitlab": "https://gitlab.com/JoshLmao/5CS027-Zeroes",
+          "github": "https://github.com/JoshLmao/5CS027-Zeroes",
           "youtube": "https://youtu.be/HmhtK7DlICc"
         }
       },
       {
         "title": "Project Boss",
-        "description": "My year-long dissertation project for my University Bachelors degree. I created an Artificially Intelligent character, inside Unreal Engine 4.25, that is able to adapt itself to the skill of the player. The character uses machine learning to update costs within the AI's Goal Oriented Action Planning (GOAP) system to determine the best actions to take. More information can be found on the [Github repository](https://github.com/joshlmao/6CS007-ProjectBoss)  \n\n **Engine**: Unreal Engine 4.25.4",
+        "description": "My year-long dissertation project for my University Bachelors degree. I created an Artificially Intelligent character, inside Unreal Engine 4.25, that is able to adapt itself to the skill of the player. The character uses machine learning to update costs within the AI's Goal Oriented Action Planning (GOAP) system to determine the best actions to take.",
         "date": "2021-05-01T00:00:00.000Z",
-        "subtitle": "Dissertation Project",
         "assets": {
-          "video": "/projects/project_boss.mp4"
+          "video": "/projects/project-boss.mp4"
         },
         "links": {
-          "github": "https://github.com/JoshLmao/6CS007-ProjectBoss"
+          "github": "https://github.com/JoshLmao/6CS007-ProjectBoss",
+          "download": "https://github.com/JoshLmao/6CS007-ProjectBoss/releases"
         }
       },
       {
         "title": "Quinn's Escape",
-        "description": "I worked together with a partner to create a design document of a video game that we would create. We designed a 2.5D, mario-like video game in which the player has to defeat enemies to escape from an abandoned shop. The player gains score from finding secret puzzles and killing enemies, and defeating the final boss.  \n\n **Engine**: Unreal Engine 4.22.3",
+        "description": "I worked together with a partner to create a design document of a video game that we would create. We designed a 2.5D, mario-like video game in which the player has to defeat enemies to escape from an abandoned shop. The player gains score from finding secret puzzles and killing enemies, and defeating the final boss.",
         "date": "2021-05-01T00:00:00.000Z",
         "subtitle": "University project",
         "assets": {
@@ -49,12 +49,50 @@
         "links": {
           "github": "https://github.com/JoshLmao/6CS025-QuinnsEscape"
         }
+      },
+      {
+        "title": "DotA Clicker VR",
+        "subtitle": "Incremental game",
+        "description": "I created an incremental genre game based on the heroes of Defense of the Ancients 2 (DotA 2) inside Unity 5.5.0. Players can make a hero farm for gold which is given to the player. With the gold, you can buy extra heroes that farm more gold, items to farm faster or upgrades to farm quicker. The game uses virtual reality with player-scale heroes that mine for gold in front of the player, but can be played without VR.",
+        "date": "2017-02-01T00:00:00.000Z",
+        "assets": {
+          "image": "/projects/dota-clicker-vr.jpg"
+        },
+        "links": {
+          "github": "https://github.com/JoshLmao/DotA-Clicker-VR",
+          "youtube": "https://youtu.be/mZWSmosu5DM",
+          "download": "https://github.com/JoshLmao/DotA-Clicker-VR/releases/"
+        }
+      },
+      {
+        "title": "Weave",
+        "description": "Weave is a mobile first game where the player must push the ball as high as possible, gaining score through height and collecting pellets. There are also power-ups that can cause positive and negative effects so be careful!\n\nCreated in Unity 5.5.0f3 and deployed to Google Play Store",
+        "date": "2018-10-01T00:00:00.000Z",
+        "assets": {
+          "video": "/projects/weave-gameplay.webm"
+        },
+        "links": {
+          "github": "https://github.com/JoshLmao/weave/",
+          "google_play_store": "https://play.google.com/store/apps/details?id=com.JoshLmao.Weave"
+        }
+      },
+      {
+        "title": "PorkCorp",
+        "date": "2018-05-01T00:00:00.000Z",
+        "subtitle": "Unfinished",
+        "description": "Inspired by [Egg, Inc](https://apps.apple.com/us/app/egg-inc/id993492744), I attempted at creating my own version inside Unity called PorkCorp, centered around pigs. The project didn't get too far but the video shows my progress before I stopped.\n\n PorkCorp is an incremental type game centered around clicking to create gold and using that to buy more upgrades and machines to help you gain gold.",
+        "assets": {
+          "video": "/projects/porkcorp-gameplay.webm"
+        },
+        "links": {
+          "github": "https://github.com/JoshLmao/PorkCorp/"
+        }
       }
     ],
     "web": [
       {
         "title": "NHS Asset Tracker",
-        "description": "For my level 5 module for collaborative development, we created a web application that allows for assets of any type to be added and tracked, either by manual entry or tracked by an Arduino to broadcast it's location.  \n\n**Technologies:** [React](https://reactjs.org/), [PHP](https://www.php.net/)",
+        "description": "For my level 5 module for collaborative development, we created a web application that allows for assets of any type to be added and tracked, either by manual entry or tracked by an Arduino to broadcast it's location.\n\n**Technologies:** [React](https://reactjs.org/), [PHP](https://www.php.net/)",
         "date": "2020-05-01T00:00:00.000Z",
         "subtitle": "University project",
         "links": {
@@ -67,8 +105,9 @@
       },
       {
         "title": "Genify",
-        "description": "I created a website that allowed users to log in with their [Spotify](https://spotify.com) account to get their current playing track and display the lyrics, gathered from [Genius](https://genius.com).  \n\n**Technologies:** [React](https://reactjs.org/), [Spotify Web API](https://developer.spotify.com/documentation/web-api/)",
+        "subtitle": "Web app for finding lyrics",
         "date": "2019-02-01T00:00:00.000Z",
+        "description": "I created a website that allowed users to log in with their [Spotify](https://spotify.com) account to get their current playing track and display the lyrics, gathered from [Genius](https://genius.com).\n\n**Technologies:** [React](https://reactjs.org/), [Spotify Web API](https://developer.spotify.com/documentation/web-api/)",
         "links": {
           "github": "https://github.com/JoshLmao/Genify",
           "website": "https://genify.joshlmao.com"
@@ -78,23 +117,25 @@
         }
       },
       {
-          "title": "foresight",
-          "description": "Foresight is a web app with the aim of calculating hero and ability damage for the game [DotA 2](https://store.steampowered.com/app/570/). The app allows users to select a hero, their level and their items and will display the resulting ability damage. The data is all loaded from core JSON files that also power the game.\n\n **Technologies:** [React](https://reactjs.org/)",
-          "date": "2020-07-01T00:00:00Z",
-          "links": {
-              "github": "https://github.com/joshlmao/foresight",
-              "website": "https://foresight.joshlmao.com/"
-          },
-          "assets": {
-              "image": "/projects/foresight-preview.jpg"
-          }
+        "title": "Foresight",
+        "subtitle": "DotA 2 Damage Calculator App",
+        "description": "Foresight is a web app with the aim of calculating hero and ability damage for the game [DotA 2](https://store.steampowered.com/app/570/). The app allows users to select a hero, their level and their items and will display the resulting ability damage. The data is all loaded from core JSON files that also power the game.\n\n **Technologies:** [React](https://reactjs.org/)",
+        "date": "2020-09-01T00:00:00.000Z",
+        "links": {
+          "github": "https://github.com/JoshLmao/foresight",
+          "website": "https://foresight.joshlmao.com"
+        },
+        "assets": {
+          "image": "/projects/foresight-landing.jpg"
+        }
       }
     ],
     "other": [
       {
         "title": "Spotify4Unity",
-        "description": "Spotify4Unity is a plugin which helps you integrate Spotify connectivity into you Unity game/application easily, allowing users to use basic track control functionality to viewing their whole library.\n\n**Technologies:** Unity, [SpotifyAPI-NET](https://github.com/JohnnyCrazy/SpotifyAPI-NET)",
+        "subtitle": "Unity plugin",
         "date": "2018-10-01T00:00:00.000Z",
+        "description": "Spotify4Unity is a plugin which helps you integrate Spotify connectivity into you Unity game/application easily, allowing users to use basic track control functionality to viewing their whole library.\n\n**Technologies:** Unity, [SpotifyAPI-NET](https://github.com/JohnnyCrazy/SpotifyAPI-NET)",
         "assets": {
           "image": "/projects/s4u.gif"
         },
@@ -105,8 +146,9 @@
       },
       {
         "title": "Darkest Dungeon Reddit Bot",
-        "description": "On the [/r/DarkestDungeon](https://reddit.com/r/darkestdungeon) subreddit, I created a bot that would be able to respond to user's comments that were a pure quote from the unforgettable Narrator, voiced by Wayne June.\n\n**Technologies:** Python, [PRAW](https://github.com/praw-dev/praw)",
+        "subtitle": "Automatic replying reddit bot",
         "date": "2019-06-01T00:00:00.000Z",
+        "description": "On the [/r/DarkestDungeon](https://reddit.com/r/darkestdungeon) subreddit, I created a bot that would be able to respond to user's comments that were a pure quote from the unforgettable Narrator, voiced by Wayne June.\n\n**Technologies:** Python, [PRAW](https://github.com/praw-dev/praw)",
         "assets": {
           "image": "/projects/ddrb.jpg"
         },
