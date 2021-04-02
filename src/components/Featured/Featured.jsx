@@ -21,8 +21,6 @@ import CardDeck from 'reactstrap/lib/CardDeck';
 
 // Filters an array by a given title
 function filterByTitle(filterArray, title) {
-    console.log(title);
-    console.log(filterArray);
     return filterArray.filter(function(x) {
         if (x.title === title) {
             return x;
@@ -81,9 +79,9 @@ class Featured extends Component {
                 var found = findProjectFromTitle(this.state.allProjects, portfolioData.featured[i]);
                 if (found)
                     featured.push(found);
+                else
+                    console.error(`Unable to find and feature project '${portfolioData.featured[i]}'`)
             }
-
-            console.log(featured);
             this.setState({
                 featured: featured,
             });

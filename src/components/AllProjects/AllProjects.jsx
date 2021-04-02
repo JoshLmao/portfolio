@@ -31,13 +31,19 @@ function LinkBtn (props) {
     );
 }
 
+// HTML template of a single project
 function Project(props) {
     return (
         <div className="py-4">
             <div className="d-flex mb-4">
                 <div className="mr-auto">
                     <h4 id={props.title}>{props.title}</h4>
-                    <h6>{formatDateToString(props.date)}</h6>
+                    <div className="d-flex">
+                        {/* Add date and subtitle, and separator is necessary */}
+                        { props.date && <h6>{formatDateToString(props.date)}</h6> }
+                        { props.subtitle && props.date && <h6 className="px-2">•</h6> }
+                        { props.subtitle && <h6>{props.subtitle}</h6> }
+                    </div>
                 </div>
                 <div className="d-flex my-auto">
                     { props.github && <LinkBtn link={props.github} faIcon={faGithub} /> }
@@ -98,19 +104,43 @@ class AllProjects extends Component {
         };
         
         this.scrollToTop  = this.scrollToTop.bind(this);
+        this.scrollToViewFromId = this.scrollToViewFromId.bind(this);
     }
     
+    componentDidMount() {
+        // Check if url contains a hash with title id and scroll to its view
+        let title_id = this.props.location.hash.substring(1);
+        if (title_id) {
+            this.scrollToViewFromId(title_id);
+        }
+    }
+
+    // Scrolls the document to the top of the page
     scrollToTop(e) {
         e.preventDefault();
         document.body.scrollTop = 0; // For Safari
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 
+    // Sets the active tab on the page to the given tab
     setActiveTab(tab) {
         //console.log("setting active tab to " + tab);
         this.setState({
             activeTab: tab
         });
+    }
+
+    // Uses scroll to view on a HTML element, using the element id to search for it
+    scrollToViewFromId(element_id) {
+        if (element_id) {
+            // Unescape the id if necessary and attempt to get by the 
+            let unescaped_id = decodeURI(element_id);
+            let element = document.getElementById(unescaped_id);
+            if (element) {
+                // If found, scroll view
+                element.scrollIntoView();
+            }
+        }
     }
 
     render() {
@@ -120,10 +150,12 @@ class AllProjects extends Component {
         }
 
         const getProject = (value) => {
-            return <Project    key={value.title}
+            return <Project    
+                        key={value.title}
                         title={value.title} 
-                        description={value.description} 
+                        subtitle={value.subtitle}
                         date={value.date}
+                        description={value.description} 
                         img_path={value.assets?.image ? value.assets.image : null} 
                         video_path={value.assets?.video ? value.assets.video : null}
                         github={value.links?.github ? value.links.github : null}
