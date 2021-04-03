@@ -11,6 +11,7 @@ import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faGitlab, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import { formatDateToString } from "../utility";
 import projectData from "../../data/projects.json";
@@ -91,6 +92,7 @@ class Featured extends Component {
         return (
             <div className="">
                 <h2>Featured Work</h2>
+                <h6>See all of my projects at <Link to="/projects">/projects</Link></h6>
                 <CardDeck className="pt-3" style={{color: "black"}}>
                     {
                         this.state.featured && this.state.featured.map((value, index) => {
