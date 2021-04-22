@@ -6,7 +6,7 @@
         "date": "2017-07-01T00:00:00.000Z",
         "subtitle": "Ludum Dare 39 entry",
         "assets": {
-          "image": "/projects/lumiere.png"
+          "video": "/projects/lumiere-gameplay.webm"
         },
         "links": {
           "github": "https://github.com/joshlmao/lumiere",
@@ -44,7 +44,7 @@
         "date": "2021-05-01T00:00:00.000Z",
         "subtitle": "University project",
         "assets": {
-          "image": "/img/wip.png"
+          "video": "/projects/quinns-escape-gameplay.webm"
         },
         "links": {
           "github": "https://github.com/JoshLmao/6CS025-QuinnsEscape"
